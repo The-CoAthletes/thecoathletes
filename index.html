@@ -839,7 +839,7 @@ with a vison to develop the right system needed for sport development at grassro
     </div>
     <div></div>
     <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(255,255,255,1); max-width:540px; border-radius:8px; border-width:1px; border-color:#C0CCD9; border-style:solid; direction:ltr">
-      <form id="sib-form" method="POST" action="https://4eca7315.sibforms.com/serve/MUIEAOSNaQhQ0awCS2QwyEZ7488qaNHSTg_v7iGUD_LcHpKfSbTlLaeIOMSOUGYGa9yuvynx1CcPnzE0AQRMrPPttLplyWAwEZlOrYyFE0zx9UHuYy0QsHcDcsFW6XSXsURxwL0_z1bs0HRwEBOWg90p_pLnnJ11j-ngyRXCRbWf7BsJUjR-_CKK8fWp81HJp-md1f8x8xCITUpw" data-type="subscription">
+      <form id="sib-form" method="POST" action="https://4eca7315.sibforms.com/serve/MUIEAHLwDl1uNlJLLppkYlkFmTrxgKQZ-dJCA5yNgcy5EQaVHFXfQPR2Tid7kcZcFEO7crIl_ZbKyapApDLQZII7rSqmqIn_QadQlb9XOVMJUhpMFs44DismXBAN9cjjmyu6ijoyFjHcy4OpBG5Kcd4kRwVCCwd2o7XLEUiFaxDCOINnp2zNjLSiYevJg3Mdq9EHA6kEmB9zYi3r" data-type="subscription">
         <div style="padding: 8px 0;">
           <div class="sib-form-block sib-divider-form-block">
             <div style="border: 0; border-bottom: 1px solid #E5EDF6"></div>
@@ -1687,7 +1687,25 @@ with a vison to develop the right system needed for sport development at grassro
           </div>
         </div>
         <div style="padding: 8px 0;">
-          <div class="g-recaptcha" data-sitekey="6LfBGVgkAAAAAOw6Uz0oLV3V6ig7GKWMpVUFhA9p" data-callback="invisibleCaptchaCallback" data-size="invisible" onclick="executeCaptcha"></div>
+          <div class="sib-captcha sib-form-block">
+            <div class="form__entry entry_block">
+              <div class="form__label-row ">
+                <label class="entry__label" style="font-weight: 700; text-align:left; font-size:12px; text-align:left; font-weight:700; font-family:&quot;Helvetica&quot;, sans-serif; color:#3c4858;">Form secured by reCAPTCHA</label>
+                <script>
+                  function handleCaptchaResponse() {
+                    var event = new Event('captchaChange');
+                    document.getElementById('sib-captcha').dispatchEvent(event);
+                  }
+                </script>
+                <div class="g-recaptcha sib-visible-recaptcha" id="sib-captcha" data-sitekey="6LfBGVgkAAAAAOw6Uz0oLV3V6ig7GKWMpVUFhA9p" data-callback="handleCaptchaResponse" style="direction:ltr"></div>
+              </div>
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+              </label>
+              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:&quot;Helvetica&quot;, sans-serif; color:#8390A4; text-align:left">
+                Form secured by reCAPTCHA
+              </label>
+            </div>
+          </div>
         </div>
         <div style="padding: 8px 0;">
           <div class="sib-form-block" style="text-align: left">
@@ -1736,7 +1754,6 @@ with a vison to develop the right system needed for sport development at grassro
 
 <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
 <!-- End Sendinblue Form -->
-
 
 <!-- Footer section
 ================================================== -->
