@@ -83,8 +83,48 @@ http://www.tooplate.com/view/2078-The CoAthletes
 
 	
 	
-<script>var BotStar={appId:"sea38228c-e6db-4697-812b-1d493e9a1c96",mode:"livechat"};!function(t,a){var e=function(){(e.q=e.q||[]).push(arguments)};e.q=e.q||[],t.BotStarApi=e;!function(){var t=a.createElement("script");t.type="text/javascript",t.async=1,t.src="https://widget.botstar.com/static/js/widget.js";var e=a.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();}(window,document)</script>
+<!-- <script>var BotStar={appId:"sea38228c-e6db-4697-812b-1d493e9a1c96",mode:"livechat"};!function(t,a){var e=function(){(e.q=e.q||[]).push(arguments)};e.q=e.q||[],t.BotStarApi=e;!function(){var t=a.createElement("script");t.type="text/javascript",t.async=1,t.src="https://widget.botstar.com/static/js/widget.js";var e=a.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();}(window,document)</script> -->
 	
+
+<script type='text/javascript'>
+        $("#contact-form").submit(function (e) {
+            alert("Hello! I am an alert box!!");
+            var url = "free_session.php"; // the script where you handle the form input.
+
+            $.ajax({
+
+                type: "POST",
+
+                url: url,
+
+                data: $("#contact-form").serialize(), // serializes the form's elements.
+                success: function (data) {
+                    data = JSON.parse(data);
+                    if (data.send != 'success') {
+                        swal("Error!", data.msg, "error");
+                    } else {
+                        swal("Success!", data.msg, "success");
+                    }
+                }
+            });
+
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+        });
+
+        $(function () {
+            $('#WAButton').floatingWhatsApp({
+                phone: '916362199123', //WhatsApp Business phone number International format-
+                headerTitle: 'Chat with us on WhatsApp!', //Popup Title
+                popupMessage: 'Hello, how can we help you?', //Popup Message
+                showPopup: true, //Enables popup display
+                buttonImage: '<img src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/whatsapp.svg" />', //Button Image
+                //headerColor: 'crimson', //Custom header color
+                //backgroundColor: 'crimson', //Custom background button color
+                position: "right"
+            });
+        });
+    </script>
+
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
 
