@@ -134,6 +134,15 @@ hr {
   background-size: cover !important;
 }
 
+ .google-map {
+    border-top: 1px solid #efebeb;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .google-map iframe {
+    width: 100%;
+  }
 
 /* preloader styles
 /* ========================================== */
